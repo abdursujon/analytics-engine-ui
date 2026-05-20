@@ -1,9 +1,9 @@
-# transform-my-raw-data — Vite + React + TypeScript + Tailwind Setup Guide
+# analytics-engine — Vite + React + TypeScript + Tailwind Setup Guide
 
 
 ## 1. Clone the Project Directory
 ```bash
-git clone https://github.com/abdursujon/transform-my-raw-data.git
+git clone https://github.com/abdursujon/analytics-engine-ui.git
 ```
 
 ## 2. Create react app with typeScript and add node.js dependency 
@@ -105,7 +105,7 @@ import logo from '../assets/favicon.png'
 export default function Header() {
   return (
     <header className="flex items-center justify-center h-[120px]">
-      <img src={logo} alt="transform-my-raw-data Logo" className="h-12 w-12" />
+      <img src={logo} alt="analytics-engine Logo" className="h-12 w-12" />
     </header>
   )
 }

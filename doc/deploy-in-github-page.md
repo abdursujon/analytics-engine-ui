@@ -7,7 +7,7 @@ npm install --save-dev gh-pages
 ### 2. Edit vite.config.ts:
 
 export default defineConfig({
-  base: '/transform-my-raw-data/',
+  base: '/analytics-engine/',
   plugins: [react(), tailwindcss()],
 })
 
@@ -34,4 +34,4 @@ Folder: / (root)
 
 Wait few mins then check the live url 
 ### 7. Live URL
-https://abdursujon.github.io/transform-my-raw-data/
+https://abdursujon.github.io/analytics-engine/

@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/transform-my-raw-data/',
+  base: '/analytics-engine/',
   plugins: [react(), tailwindcss()],
   server: {
     proxy: {
