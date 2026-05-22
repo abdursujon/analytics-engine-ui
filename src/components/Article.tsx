@@ -1,36 +1,40 @@
 const AVAILABLE_NOW = [
-  {
-    title: 'Data quality checks',
-    body: 'Null and missing values per column, invalid entries, and format validation.',
+   {
+    title: "Multi-format ingestion",
+    body: "Profile CSV, Parquet, JSON, and NDJSON through dedicated endpoints - one API, four common data-engineering formats.",
   },
   {
-    title: 'Descriptive statistics',
-    body: 'Minimum, maximum, mean, median, standard deviation, totals, and counts.',
+    title: "Data quality checks",
+    body: "Null and missing values per column, invalid entries, and format validation.",
   },
   {
-    title: 'Distribution analysis',
-    body: 'Percentiles (P25 / P50 / P75 / P90 / P95 / P99) across every numeric column.',
+    title: "Descriptive statistics",
+    body: "Minimum, maximum, mean, median, standard deviation, totals, and counts.",
   },
   {
-    title: 'Column-level insights',
-    body: 'Unique value counts and automatic numeric vs. non-numeric type detection.',
+    title: "Distribution analysis",
+    body: "Percentiles (P25 / P50 / P75 / P90 / P95 / P99) across every numeric column.",
   },
-]
+  {
+    title: "Column-level insights",
+    body: "Unique value counts and automatic numeric vs. non-numeric type detection.",
+  },
+];
 
 const COMING_SOON = [
   {
-    title: 'Outlier detection',
-    body: 'Flag values that fall outside statistical thresholds (IQR, z-score).',
+    title: "JSON file upload",
+    body: "Profile JSON and NDJSON directly — useful for API exports and event logs.",
   },
   {
-    title: 'Skewness & kurtosis',
-    body: 'Shape-of-distribution metrics on top of the existing percentile breakdown.',
+    title: "Skewness & kurtosis",
+    body: "Shape-of-distribution metrics on top of the existing percentile breakdown.",
   },
   {
-    title: 'Correlation matrices',
-    body: 'Pairwise correlation across all numeric columns for relationship analysis.',
+    title: "Correlation matrices",
+    body: "Pairwise correlation across all numeric columns for relationship analysis.",
   },
-]
+];
 
 export default function Article() {
   return (
@@ -41,29 +45,46 @@ export default function Article() {
       </div>
 
       <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-        What this application{' '}
+        What this application{" "}
         <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           actually does
         </span>
       </h2>
 
       <p className="mt-5 max-w-3xl text-lg leading-relaxed">
-        <span className="font-semibold text-slate-900">Analytics Engine</span>{' '}
+        <span className="font-semibold text-slate-900">Analytics Engine</span>{" "}
         turns uploaded files into structured insights. It validates input,
-        processes datasets up to <span className="font-semibold">5&nbsp;MB</span>{' '}
-        / <span className="font-semibold">1Million cells</span>, and returns detailed
-        statistical results in real time - through calling a dedicated back end Spring Boot
-        analysis API service.
+        processes datasets up to{" "}
+        <span className="font-semibold">5&nbsp;MB</span> /{" "}
+        <span className="font-semibold">1Million cells</span>, and returns
+        detailed statistical results in real time - through calling a dedicated
+        back end Spring Boot analysis API service.
       </p>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
-        <Card label="Input" value="CSV · TXT" hint="text/csv or text/plain bodies, up to 5 MB" />
-        <Card label="Output" value="JSON" hint="Per-column stats, downloadable as analysis.json" />
+        <Card
+          label="Input"
+          value=" PARQUET · JSON · NDJSON · CSV"
+          hint="text/csv or text/plain bodies, up to 5 MB"
+        />
+        <Card
+          label="Output"
+          value="JSON"
+          hint="Per-column stats, downloadable as analysis.json"
+        />
       </div>
 
       <h3 className="mt-16 flex items-center gap-3 text-2xl font-semibold text-slate-900">
         <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-emerald-100 text-emerald-700">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-4 w-4"
+          >
             <path d="M5 12l5 5L20 7" />
           </svg>
         </span>
@@ -78,7 +99,15 @@ export default function Article() {
 
       <h3 className="mt-16 flex items-center gap-3 text-2xl font-semibold text-slate-900">
         <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-amber-100 text-amber-700">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-4 w-4"
+          >
             <circle cx="12" cy="12" r="9" />
             <path d="M12 7v5l3 2" />
           </svg>
@@ -100,8 +129,8 @@ export default function Article() {
           <p className="mt-3 leading-relaxed">
             While analysis is running, the UI displays progress and status
             updates. Once complete, you can review the result inline or download
-            the full JSON report. You can also delete the analysis which completely
-            removes all data from the database.
+            the full JSON report. You can also delete the analysis which
+            completely removes all data from the database.
           </p>
         </article>
 
@@ -117,10 +146,18 @@ export default function Article() {
         </article>
       </div>
     </section>
-  )
+  );
 }
 
-function Card({ label, value, hint }: { label: string; value: string; hint: string }) {
+function Card({
+  label,
+  value,
+  hint,
+}: {
+  label: string;
+  value: string;
+  hint: string;
+}) {
   return (
     <div className="rounded-xl border border-slate-200 bg-white/60 p-5 backdrop-blur-sm">
       <div className="text-xs font-medium uppercase tracking-widest text-slate-400">
@@ -129,7 +166,7 @@ function Card({ label, value, hint }: { label: string; value: string; hint: stri
       <div className="mt-1 text-xl font-semibold text-slate-900">{value}</div>
       <div className="mt-2 text-sm text-slate-500">{hint}</div>
     </div>
-  )
+  );
 }
 
 function FeatureItem({
@@ -137,23 +174,23 @@ function FeatureItem({
   body,
   muted = false,
 }: {
-  title: string
-  body: string
-  muted?: boolean
+  title: string;
+  body: string;
+  muted?: boolean;
 }) {
   return (
     <li
       className={
-        'group flex gap-3 rounded-lg border p-4 transition ' +
+        "group flex gap-3 rounded-lg border p-4 transition " +
         (muted
-          ? 'border-dashed border-slate-200 bg-slate-50/60 text-slate-600'
-          : 'border-slate-200 bg-white hover:border-indigo-300 hover:shadow-sm')
+          ? "border-dashed border-slate-200 bg-slate-50/60 text-slate-600"
+          : "border-slate-200 bg-white hover:border-indigo-300 hover:shadow-sm")
       }
     >
       <span
         className={
-          'mt-1 inline-block h-2 w-2 shrink-0 rounded-full ' +
-          (muted ? 'bg-amber-400' : 'bg-emerald-500')
+          "mt-1 inline-block h-2 w-2 shrink-0 rounded-full " +
+          (muted ? "bg-amber-400" : "bg-emerald-500")
         }
       />
       <div>
@@ -161,5 +198,5 @@ function FeatureItem({
         <p className="mt-1 text-sm leading-relaxed">{body}</p>
       </div>
     </li>
-  )
+  );
 }

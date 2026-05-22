@@ -19,7 +19,7 @@ export default function Footer() {
         <span className="inline-flex items-center gap-1.5">
           <span className="text-slate-400">Developed by</span>
           <a
-            href="https://github.com/AbdurRahimSujon"
+            href="https://github.com/abdursujon"
             target="_blank"
             rel="noreferrer"
             className="group inline-flex items-center gap-1 font-medium text-slate-700 transition hover:text-indigo-600"

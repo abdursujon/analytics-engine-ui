@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import FileUpload from './components/FileUpload'
 import Footer from './components/Footer'
 import Article from './components/Article'
+import SampleFile from './components/SampleFile'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <main className="flex-1">
         <Hero />
         <FileUpload />
+        <SampleFile/>
         <Article/>
       </main>
 

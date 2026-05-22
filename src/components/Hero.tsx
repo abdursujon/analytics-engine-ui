@@ -1,9 +1,9 @@
 export default function Hero() {
   function scrollToUpload() {
     document
-      .querySelector('input[type=file]')
-      ?.closest('div')
-      ?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      .querySelector("input[type=file]")
+      ?.closest("div")
+      ?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
   return (
@@ -26,15 +26,15 @@ export default function Hero() {
       </div>
 
       <h1 className="mx-auto mt-6 max-w-4xl text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
-        Transform raw data into{' '}
+        Transform raw data into{" "}
         <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           instant insights
         </span>
       </h1>
 
       <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-        Upload a CSV and get accurate column-level statistics, distributions,
-        and quality checks — no spreadsheets, no manual inspection.
+        Upload a PARQUET || JSON || NDJSON || CSV file and get accurate column-level statistics, distributions,
+        and quality checks without having to do manual inspection.
       </p>
 
       <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -68,10 +68,16 @@ export default function Hero() {
       <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs text-slate-500">
         <span>Supported:</span>
         <span className="rounded-full border border-slate-200 bg-white/70 px-3 py-1 font-medium text-slate-700">
-          .csv
+          .parquet
         </span>
         <span className="rounded-full border border-slate-200 bg-white/70 px-3 py-1 font-medium text-slate-700">
-          .txt
+          .json 
+        </span>
+        <span className="rounded-full border border-slate-200 bg-white/70 px-3 py-1 font-medium text-slate-700">
+          .ndjson 
+        </span>
+        <span className="rounded-full border border-slate-200 bg-white/70 px-3 py-1 font-medium text-slate-700">
+          .csv
         </span>
         <span className="text-slate-400">·</span>
         <span>up to 5&nbsp;MB</span>
@@ -84,7 +90,7 @@ export default function Hero() {
         <Stat label="Output" value="JSON" />
       </dl>
     </section>
-  )
+  );
 }
 
 function Stat({ label, value }: { label: string; value: string }) {
@@ -95,5 +101,5 @@ function Stat({ label, value }: { label: string; value: string }) {
       </dt>
       <dd className="mt-1 text-lg font-semibold text-slate-900">{value}</dd>
     </div>
-  )
+  );
 }
