@@ -1,6 +1,6 @@
 import { useState, type ChangeEvent, type DragEvent } from "react";
 
-const API_BASE_URL = "http://13.51.225.61:8080";
+const API_BASE_URL = "https://analytics-engine.duckdns.org";
 
 function formatBytes(bytes: number) {
   if (bytes < 1024) return `${bytes} B`;
