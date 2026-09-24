@@ -1,5 +1,6 @@
 # Analytics Engine UI
- The web UI for the [Analytics Engine](https://github.com/abdursujon/analytics-engine) — a Spring Boot service that profiles CSV data. Upload a CSV, see the column-level statistics it computes, download the result as JSON.
+The web UI for the [Analytics Engine](https://abdursujon.github.io/analytics-engine-ui/)
+Spring Boot service that profiles CSV data. Upload a CSV, see the column-level statistics it computes, download the result as JSON.
 
 
 ## Live demo
